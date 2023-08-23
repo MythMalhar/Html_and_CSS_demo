@@ -1,0 +1,140 @@
+body{
+    margin: 0;
+    padding: 0; 
+    font-family: monospace;
+    background-image: url('Amrit.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+}
+.center{
+    position: absolute;
+    top : 5%;
+    bottom: 80%;
+    transform: translate(150%,75%) ;
+    width: 400px;
+    height: 285px;
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
+    border: 2px solid black;
+    border-radius: 10px;
+} 
+.center h1{
+    text-align: center;
+    padding: 0 0 10px 0;
+    border-bottom: 2px solid silver;
+}
+.center form{
+    padding: 0 80px;
+    box-sizing: content-box;
+}
+form .usname{
+    position: relative;
+    border-bottom: 2px solid black;
+    margin: 30px 0;
+}
+form .pass{
+    position: relative;
+    border-bottom: 2px solid black;
+    margin: 30px 0;
+}
+.usname input{
+    width: 100%;
+    padding: 0 5px;
+    height: 20px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+.pass input{
+    width: 100%;
+    padding: 0 5px;
+    height: 20px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+.usname label{
+    position: absolute;
+    top: 0%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+.pass label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+.usname span::before{
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #2691d9;
+    transition: .5s;
+}
+.pass span::before{
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #2691d9;
+    transition: .5s;
+}
+.usname input:focus~label,
+.usname input:valid~label{
+    top: -6px;
+    color: #2691d9;
+}
+.pass input:focus~label,
+.pass input:valid~label{
+    top: -6px;
+    color: #2691d9;
+}
+
+.usname input:focus~span::before,
+.usname input:valid~span::before{
+        width: 100%;
+}
+.pass input:focus~span::before,
+.pass input:valid~span::before{
+        width: 100%;
+}
+.fpass{
+    margin : -5px 0 10px 0px;
+    cursor: pointer;
+}
+/* .fpass:hover{
+    text-decoration: underline;
+} */
+input[type="submit"]{
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    background: #2691d9;
+    border-radius: 25px;
+    font-size: 18px;
+    color: #e9f4fb;
+    cursor: pointer;
+    outline: none;
+}
+input[type="submit"]:hover{
+    border-color: #2691d9;
+    transition: .5s;
+}
